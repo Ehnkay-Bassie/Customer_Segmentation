@@ -65,15 +65,13 @@
    - The application was then tested to ensure it was accessible and functioning as expected, with the front-end form able to submit input data, and the API returning correct cluster predictions.
 
 5. **Accessing the Application:**
-   - Once deployed, Render provided a unique URL for the application: https://customer-segmentation-6pc2.onrender.com/ 
+   - Once deployed, Render provided a unique URL for the live application: https://customer-segmentation-6pc2.onrender.com/ 
    - The web interface at this URL enables users to enter details like Order Quantity and Product Category, and receive instant predictions of customer segments (clusters) based on the input data.
 
 ## Monitoring and Maintenance
 
 - The Render dashboard offers real-time monitoring for the deployed service, providing access to logs and error tracking, which helps ensure that the application runs smoothly.
 - For any updates to the project, such as bug fixes or model retraining, the changes are pushed to the GitHub repository. Render automatically detects these updates and redeploys the application with the latest changes.
-
-** The live application can be accessed here: https://customer-segmentation-6pc2.onrender.com/ **
 ------------------------------------------------
 
 ## Technologies Used
