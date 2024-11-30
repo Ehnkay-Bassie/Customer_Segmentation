@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import Flask-CORS
+import os  # Import os for environment variable handling
 
 # Initialize the Flask app
 app = Flask(__name__)
@@ -59,8 +60,7 @@ def predict():
     return jsonify({"cluster": int(cluster[0])})
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    
+       
     # Get the port from the environment or default to 5000
     port = int(os.environ.get("PORT", 5000))
     
