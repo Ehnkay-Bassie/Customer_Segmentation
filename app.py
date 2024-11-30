@@ -1,7 +1,7 @@
 import pickle
 import numpy as np
 import pandas as pd
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template  # Import render_template
 from flask_cors import CORS  # Import Flask-CORS
 import os  # Import os for environment variable handling
 
@@ -22,6 +22,11 @@ with open('scaler.pkl', 'rb') as scaler_file:
 FEATURE_COLUMNS = [
     "Order_Quantity", "Unit_Cost", "Unit_Price", "Profit", "Cost", "Revenue"
 ]
+
+# Define the route to serve the index.html page
+@app.route('/')
+def index():
+    return render_template('index.html')  # Render the index.html file from the templates folder
 
 # Define the API route to make predictions
 @app.route('/predict', methods=['POST'])
@@ -60,7 +65,6 @@ def predict():
     return jsonify({"cluster": int(cluster[0])})
 
 if __name__ == '__main__':
-       
     # Get the port from the environment or default to 5000
     port = int(os.environ.get("PORT", 5000))
     
