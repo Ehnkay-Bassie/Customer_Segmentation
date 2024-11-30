@@ -12,8 +12,8 @@
 - Customer_Segmentation/
 - │
 - ├── templates/
-- │   └── index.html               # HTML front end form to collect user input and call the API
-- ├── app.py                       # Flask app for API that serves the model
+- │   └── index.html               # HTML front-end form to collect user input and call the API
+- ├── app.py                       # Flask app for API that serves the model, scaler, and index.html files
 - ├── kmeans_model.pkl             # Trained machine learning model (KMeans)
 - ├── scaler.pkl                   # Scaler used for data preprocessing
 - ├── requirements.txt             # Python dependencies for Flask, scikit-learn, pandas, numpy
@@ -25,14 +25,17 @@
 
 ## How to setup and run the Application locally
 
-*Installation*
+**Installation**
 - Clone the github repository https://github.com/Ehnkay-Bassie/Customer_Segmentation.git or download the files in the repository and save in the structure above.
-- Install dependencies: pip install -r requirements.txt.
+- Install dependencies:
+```
+  pip install -r requirements.txt.
+```
 - Run the 'Customer_Segmentation_Model.ipynb' python notebook to create and save the 'kmeans_model.pkl'and the 'scaler.pkl' files.
 - Ensure the dataset 'Customer_Segmentation_py.csv' is in the same directory as the python notebook.
-- Run the app.py file to render the saved model and scaler, and the index.html front end form.
+- Run the app.py file to render the saved model and scaler, and the index.html frontend form.
 
-*Web Interface Usage*
+**Web Interface Usage**
 - You can also open your browser and navigate to http://127.0.0.1:5000 to access the html form while the app.py file is running.
 - Select or input values for the Product Category and Order Quantity fields
 - The Unit Price for each product is displayed in the dropdown menu based on the selected product category. The Unit Cost is pre-determined based on the selected product category.
@@ -70,16 +73,16 @@
 - The Render dashboard offers real-time monitoring for the deployed service, providing access to logs and error tracking, which helps ensure that the application runs smoothly.
 - For any updates to the project, such as bug fixes or model retraining, the changes are pushed to the GitHub repository. Render automatically detects these updates and redeploys the application with the latest changes.
 
-* The live application can be accessed here: https://customer-segmentation-6pc2.onrender.com/ *
+** The live application can be accessed here: https://customer-segmentation-6pc2.onrender.com/ **
 ------------------------------------------------
 
 ## Technologies Used
 
-- *Python*: Backend logic and API development.
-- *Flask*: Web framework for serving the application.
-- *scikit-learn*: Machine learning library used for training the KMeans model.
-- *pandas & numpy*: Data manipulation and preprocessing.
-- *Render*: Cloud platform for deploying the Flask application.
+- **Python**: Backend logic and API development.
+- **Flask**: Web framework for serving the application.
+- **scikit-learn**: Machine learning library used for training the KMeans model.
+- **pandas & numpy**: Data manipulation and preprocessing.
+- **Render**: Cloud platform for deploying the Flask application.
 -------------------------------------------------
 
-*Author: Nnanke Bassey
+*Author: Nnanke Bassey*
